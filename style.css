@@ -1,0 +1,426 @@
+body {
+    display: grid;
+    grid-template-rows: 60px auto;
+    grid-template-columns: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#navbar-pinterest {
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+  
+.pinterest-icon img {
+    width: 32px;
+    margin: 20px;
+}
+
+.inicio {
+    background-color: black;
+    color: white;
+    border-radius: 24px;
+}
+
+.inicio, .hoy {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+}
+
+input.search-input{
+  padding-left: 40px;
+  padding-top: 3px;
+}
+  
+.search-bar input{
+    margin: auto;
+    border-radius: 30px;
+    border: 2px solid #b7b7b7;
+    width: 1000px;
+    height: 30px;
+}
+
+.fas-lupa {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    margin-left: 16px;
+}
+
+i.fas.fa-search {
+    width: 100%;
+    height: 100%;
+}
+  
+.icons {
+    display: flex;
+    align-items: center;
+}
+  
+.icons i {
+    width: 15px;
+    margin: 10px;
+}
+
+#down i{
+    width: 10px;
+}
+  
+.icons a {
+    text-decoration: none;
+    color: #757575;
+    font-weight: bold;
+    margin: 5px;
+    padding: 0px 3px;
+}
+  
+.icons a:hover, .logo:hover {
+    background-color: #efefef;
+    border-radius: 50px;
+}
+  
+#profile-img {
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    justify-content: center;
+    margin-top: 51px;
+}
+  
+.tile-container {
+    width: 100%;
+    height: 2500px;
+    column-count: 6;
+}
+  
+.card-image {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 10px;
+    border-radius: 8px;
+    break-inside: avoid;
+}
+  
+.card-image:hover {
+    background-color: #efefef;
+}
+  
+.card-image img {
+    width: 180px;
+    border-radius: 8px;
+}
+  
+.card-image .overlay {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+  
+.card-image:hover .overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.card-image .overlay img {
+    width: 15px;
+    background-color: #efefef;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 75px;
+}
+  
+.card-image .overlay p {
+    background-color: #bd081d;
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+    border-radius: 10px;
+}
+  
+.tile-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.tile-bottom img{
+    width: 15px;
+    margin-right: 10px;
+    align-self: center;
+}
+  
+.tile-bottom p {
+    font-weight: 600;
+    color: #757575;
+    font-size: 14px;
+}
+
+/*Movil*/
+@media screen and (min-width: 320px) {
+    .tile-container {
+        width: 100%;
+        height: 5000px;
+        column-count: 2;
+        margin-left: 0;
+    }
+    .card-image img {
+        width: 140px;
+        border-radius: 8px;
+    }
+    .tile-bottom img{
+        width: 10px;
+        margin-right: 10px;
+        align-self: center;
+    }
+    .card-image {
+        width: 140px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 5px;
+        border-radius: 8px;
+        break-inside: avoid;
+    }
+    .card-image .overlay img {
+        width: 15px;
+        background-color: #efefef;
+        padding: 10px;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+    #navbar-pinterest {
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background-color: white;
+        top: 0;
+        left: 0;
+        height: 50px;
+    }
+    .inicio, .hoy {
+        width: 60px;
+        height: 40px;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .search-bar input {
+        margin: auto;
+        border-radius: 30px;
+        border: 2pxsolid #b7b7b7;
+        width: 100px;
+        height: 30px;
+    }
+
+}
+
+/*Tablet*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .tile-container {
+        width: 96%;
+        height: 2500px;
+        column-count: 4;
+    }
+    .card-image img {
+        width: 160px;
+        border-radius: 8px;
+    }
+    .tile-bottom img{
+        width: 10px;
+        margin-right: 10px;
+        align-self: center;
+    }
+    .card-image {
+        width: 160px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 5px;
+        border-radius: 8px;
+        break-inside: avoid;
+    }
+    .card-image .overlay img {
+        width: 15px;
+        background-color: #efefef;
+        padding: 10px;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-right: 50px;
+    }
+    #navbar-pinterest {
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 97%;
+        z-index: 999;
+        background-color: white;
+        top: 0;
+        left: 0;
+        height: 50px;
+    }
+    .inicio, .hoy {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .search-bar input {
+        margin: auto;
+        border-radius: 30px;
+        border: 2pxsolid #b7b7b7;
+        width: 350px;
+        height: 30px;
+    }
+
+}
+
+/*Laptop*/
+@media screen and (min-width: 1024px) {
+    .tile-container {
+        width: 94%;
+        height: 2500px;
+        column-count: 5;
+    }
+    #navbar-pinterest {
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 94%;
+        z-index: 999;
+        background-color: white;
+        top: 0;
+        left: 0;
+        height: 50px;
+    }
+    .inicio, .hoy {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .search-bar input {
+        margin: auto;
+        border-radius: 30px;
+        border: 2pxsolid #b7b7b7;
+        width: 600px;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .tile-container {
+        width: 97%;
+        height: 2500px;
+        column-count: 6;
+    }
+    #navbar-pinterest {
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 97%;
+        z-index: 999;
+        background-color: white;
+        top: 0;
+        left: 0;
+        height: 50px;
+    }
+    .inicio, .hoy {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .search-bar input {
+        margin: auto;
+        border-radius: 30px;
+        border: 2pxsolid #b7b7b7;
+        width: 1000px;
+        height: 30px;
+    }
+}
+
+/*Pc*/
+@media screen and (min-width: 1920px) {
+    .tile-container {
+        width: 100%;
+        height: 2500px;
+        column-count: 9;
+    }
+    #navbar-pinterest {
+        border-bottom: 1px solid #f2f2f2;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        background-color: white;
+        top: 0;
+        left: 0;
+        height: 50px;
+    }
+    .inicio, .hoy {
+        width: 60px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .search-bar input {
+        margin: auto;
+        border-radius: 30px;
+        border: 2pxsolid #b7b7b7;
+        width: 2150px;
+        height: 30px;
+    }
+}
